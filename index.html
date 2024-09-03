@@ -41,9 +41,9 @@
 <body>
     <h1>Find the Flag</h1>
 
-    <!-- Image Container First-Part:ACOR{source -->
+    <!-- Image Container -->
     <div class="image-container">
-        <!-- Image for Source Code -->
+        <!-- Image for Source Code First-Part:ACOR{source -->
         <div>
             <img src="source_code.jpg" alt="Source Code">
             <p class="caption">(1)</p>
@@ -61,5 +61,24 @@
             <p class="caption">(3)</p>
         </div>
     </div>
+
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        // Encode the third part of the flag in Base64
+        var thirdPart = btoa("THIRD_PART_OF_FLAG");
+
+        // Set the cookie with the third part of the flag
+        setCookie("Third-Part", thirdPart, 7); // Cookie expires in 7 days
+    </script>
 </body>
 </html>
