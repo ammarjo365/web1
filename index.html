@@ -17,39 +17,49 @@
             text-align: center;
         }
 
-        /* Make all images the same size */
-        img {
-            width: 300px; /* Set your desired width */
-            height: 300px; /* Set your desired height */
-            object-fit: cover; /* Ensures the image covers the area without distortion */
-            margin-bottom: 10px; /* Adds space below each image */
+        /* Container for images to align them horizontally */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between images */
         }
 
-        /* Add some spacing between images and the numbers */
-        div {
-            margin-bottom: 20px;
+        /* Make all images the same size */
+        img {
+            width: 200px; /* Set your desired width */
+            height: 200px; /* Set your desired height */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+        }
+
+        /* Style the text numbers under each image */
+        .caption {
+            text-align: center;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
     <h1>Find the Flag</h1>
-    
-    <!-- Image for Source Code First-Part:ACOR{source -->
-    <div>
-        <img src="source_code.jpg" alt="Source Code">
-        <p>(1)</p>
-    </div>
 
-    <!-- Image for robots.txt -->
-    <div>
-        <img src="robots.jpg" alt="Robots.txt">
-        <p>(2)</p>
-    </div>
+    <!-- Image Container First-Part:ACOR{source -->
+    <div class="image-container">
+        <!-- Image for Source Code -->
+        <div>
+            <img src="source_code.jpg" alt="Source Code">
+            <p class="caption">(1)</p>
+        </div>
 
-    <!-- Image for Cookies -->
-    <div>
-        <img src="cookies.jpg" alt="Cookies">
-        <p>(3)</p>
+        <!-- Image for robots.txt -->
+        <div>
+            <img src="robots.jpg" alt="Robots.txt">
+            <p class="caption">(2)</p>
+        </div>
+
+        <!-- Image for Cookies -->
+        <div>
+            <img src="cookies.jpg" alt="Cookies">
+            <p class="caption">(3)</p>
+        </div>
     </div>
 </body>
 </html>
